@@ -38,6 +38,7 @@ def predict_datapoint():
             writing_score=80
 
         )
+        
         pred_df=data.get_data_as_data_frame()
         print(pred_df)
         print("Before Prediction")
