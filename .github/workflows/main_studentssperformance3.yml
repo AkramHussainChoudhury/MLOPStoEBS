@@ -33,4 +33,5 @@ jobs:
         run: |
           eb init $EB_APP_NAME --platform "Python 3.11" --region $AWS_REGION
           eb use $EB_ENV_NAME
-          eb deploy
+          eb deploy --staged --verbose
+          eb logs
