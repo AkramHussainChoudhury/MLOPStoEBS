@@ -6,9 +6,8 @@ from sklearn.preprocessing import StandardScaler
 from src.pipeline.predict_pipeline import CustomData,PredictPipeline
 from src.pipeline.train_pipeline import TrainPipeline
 
-application=Flask(__name__)
+app=Flask(__name__)
 
-app=application
 
 ## Route for a home page
 
@@ -38,7 +37,7 @@ def predict_datapoint():
             writing_score=80
 
         )
-        
+
         pred_df=data.get_data_as_data_frame()
         print(pred_df)
         print("Before Prediction")

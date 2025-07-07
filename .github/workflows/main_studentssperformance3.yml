@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.13'
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
@@ -31,6 +31,6 @@ jobs:
           EB_ENV_NAME: ${{ secrets.EB_ENV_NAME }}
           EB_APP_NAME: ${{ secrets.EB_APP_NAME }}
         run: |
-          eb init $EB_APP_NAME --platform "Python 3.13" --region $AWS_REGION
+          eb init $EB_APP_NAME --platform "Python 3.11" --region $AWS_REGION
           eb use $EB_ENV_NAME
           eb deploy
